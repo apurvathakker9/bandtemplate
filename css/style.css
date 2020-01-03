@@ -1,0 +1,80 @@
+.footer-section {
+    background: #222;
+    color: #FFF;
+    padding: 50px 0;
+}
+
+.social a{
+    color: white;
+    font-size: 1.6rem;
+    margin: 0px 5px;
+}
+
+.social a:hover{
+    color:grey;
+}
+
+.copyright-text{
+    margin-top: 10px;
+}
+
+#band-members{
+    padding: 73px 0px;
+    background-color: whitesmoke;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+}
+
+.band-heading{
+    margin-bottom: 50px;
+}
+
+.members-social{
+    font-size: 1.9rem;
+}
+
+#gallery{
+    padding: 73px 0px;
+}
+
+.gallery-heading{
+    margin-bottom: 50px;
+}
+
+#gallery > .col-md-3, .col-sm-3{
+    padding: 0px 0px !important;
+}
+
+#gallery .card{
+    border: 0px!important;
+}
+
+#gallery .card img{
+    max-height: 180px;
+    max-width: 286px;
+}
+
+#contact{
+    padding: 60px 0px;
+    background-color: whitesmoke;
+}
+
+.contact-heading{
+    margin-bottom: 20px;
+}
+
+#events-we-cover{
+    padding: 73px 0px;
+}
+
+#events-we-cover img{
+    height: 200px;
+    width: 200px;
+}
+
+.events-covered-heading{
+    margin-bottom: 50px;
+}
