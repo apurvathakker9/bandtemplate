@@ -31,10 +31,10 @@
             </button>
             <!--Normal Nav-->
             <ul class="nav desktop-view">
-              <li class="nav-item"><a href="/" class="nav-link text-light">Home</a></li>
-              <li class="nav-item"><a href="/" class="nav-link text-light">About</a></li>
-              <li class="nav-item"><a href="/" class="nav-link text-light">Gallery</a></li>
-              <li class="nav-item"><a href="/" class="nav-link text-light">Contact</a></li>
+              <li class="nav-item"><a href="#header" id="home-nav" onclick="smoothScroll('#header')" class="nav-link text-light active">Home</a></li>
+              <li class="nav-item"><a href="#about" id="about-nav" onclick="smoothScroll('#events-we-cover')" class="nav-link text-light">About</a></li>
+              <li class="nav-item"><a href="#gallery" id="gallery-nav" onclick="smoothScroll('#gallery')" class="nav-link text-light">Gallery</a></li>
+              <li class="nav-item"><a href="#contact" id="contact-nav" onclick="smoothScroll('#contact')" class="nav-link text-light">Contact</a></li>
               <li class="nav-item"><a href="http://www.facebook.com" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
               <li class="nav-item"><a href="http://www.instagram.com" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
               <li class="nav-item"><a href="http://www.youtube.com" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube"></i></a></li>
@@ -44,10 +44,10 @@
             <div class="collapse navbar-collapse" id="navbarToggler">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item"><hr style="border-top: 1px solid white"></li>
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#header" onclick="smoothScroll('#header')" id="home-nav" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" onclick="smoothScroll('#events-we-cover')" id="about-nav" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#gallery" onclick="smoothScroll('#gallery')" id="gallery-nav" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#contact" onclick="smoothScroll('#contact')" id="contact-nav" class="nav-link">Contact</a></li>
                 <li class="nav-item"><hr style="border-top: 1px solid white"></li>
                 <li class="nav-item">
                   <div class="social">
@@ -340,9 +340,17 @@
           checkScreenWidth();
           $(window).on('resize',function(){
             checkScreenWidth();
-          });           
+          });                     
         });
 
+        //Function for smooth scroll
+        function smoothScroll(target){
+          $('html, body').animate({
+               scrollTop: $(target).offset().top
+            }, 1000); 
+        }
+
+        //Function to checkScreenWidth
         function checkScreenWidth(){
           if($(window).width()<=768){
               $('.navbar-toggler').show();
